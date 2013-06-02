@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="SpringHibMaven:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SpringHibMaven.war">
+      <element id="artifact" artifact-name="SpringHibMaven:war exploded" />
+    </root>
+  </artifact>
+</component>
