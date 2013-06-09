@@ -5,10 +5,7 @@ import com.springapp.service.ShopService;
 import com.springapp.service.ShopServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -77,5 +74,15 @@ public class ShopController {
         String message = "Shop was successfully deleted.";
         modelAndView.addObject("message", message);
         return modelAndView;
+    }
+
+    @RequestMapping( value = "/getshop")
+    @ResponseBody
+    public Shop getShop() {
+        Shop shop = new Shop();
+        shop.setName("Conor");
+        shop.setRating(5);
+        shop.setId(1);
+        return shop;
     }
 }
